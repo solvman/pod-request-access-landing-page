@@ -1,0 +1,34 @@
+@import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&display=swap");
+/* Global variables */
+:root {
+  --color-primary-100: hsl(0, 0%, 100%);
+  --color-neutral-200: hsl(225, 40%, 83%);
+  --color-neutral-500: hsl(225, 21%, 45%);
+  --color-neutral-800: hsl(225, 26%, 23%);
+  --color-neutral-900: hsl(224, 35%, 11%);
+
+  --color-accent-400: hsl(157, 74%, 62%);
+  --color-accent-hover-200: hsl(157, 100%, 85%);
+  --color-error-400: hsl(0, 96%, 61%);
+
+  --font-family: "Chivo", sans-serif;
+  --font-weight-regular: 400;
+}
+
+/* Reset */
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+input,
+button {
+  font: inherit;
+}
+
+ul {
+  list-style: none;
+}
