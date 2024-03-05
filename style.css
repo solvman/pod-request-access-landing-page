@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&display=swap");
 /* Global variables */
 :root {
-  --color-primary-100: hsl(0, 0%, 100%);
-  --color-neutral-200: hsl(225, 40%, 83%);
-  --color-neutral-500: hsl(225, 21%, 45%);
-  --color-neutral-800: hsl(225, 26%, 23%);
-  --color-neutral-900: hsl(224, 35%, 11%);
+  --color-100: hsl(0, 0%, 100%);
+  --color-200: hsl(225, 40%, 83%);
+  --color-500: hsl(225, 21%, 45%);
+  --color-800: hsl(225, 26%, 23%);
+  --color-900: hsl(224, 35%, 11%);
 
   --color-accent-400: hsl(157, 74%, 62%);
   --color-accent-hover-200: hsl(157, 100%, 85%);
@@ -31,4 +31,104 @@ button {
 
 ul {
   list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Styles */
+
+body {
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-200);
+}
+
+main {
+  padding-inline: 1.5rem;
+}
+
+.background-img::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("./assets/mobile/image-host.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: var(--color-900);
+  background-blend-mode: overlay;
+  z-index: -1;
+}
+
+.accent {
+  color: var(--color-accent-400);
+}
+
+.title {
+  font-size: 1.625rem;
+  font-weight: 100;
+  line-height: 1.46;
+  text-align: center;
+  color: var(--color-100);
+  text-transform: uppercase;
+}
+
+.description {
+  font-size: 0.9375rem;
+  text-align: center;
+  font-weight: 100;
+  line-height: 1.66;
+}
+
+.signup-form__field input,
+.signup-form__field button {
+  height: 2.875rem;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 2;
+  border: none;
+  border-radius: 1.75rem;
+}
+
+.signup-form__field input {
+  color: var(--color-100);
+  background-color: var(--color-800);
+  text-align: center;
+  width: 100%;
+  outline: none;
+}
+
+.signup-form__field input::placeholder {
+  opacity: 0.5;
+}
+
+.signup-form__field button {
+  width: 100%;
+  background-color: var(--color-accent-400);
+  box-shadow: 0px 25px 20px -20px rgba(84, 230, 175, 0.5);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.signup-form__field button:hover {
+  background-color: var(--color-accent-hover-200);
+}
+
+.signup-form__field small {
+  display: block;
+  text-align: center;
+  color: var(--color-error-400);
+  line-height: normal;
+  font-weight: 700;
+  font-size: 0.75rem;
+}
+
+.logo img {
+  margin: 3.875rem auto;
+}
+
+.vendors {
+  display: flex;
+  gap: 1rem;
 }
