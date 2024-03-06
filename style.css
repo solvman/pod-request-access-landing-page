@@ -140,3 +140,34 @@ main {
   justify-content: space-evenly;
   gap: 1rem;
 }
+
+@media screen and (min-width: 768px) {
+  .logo {
+    width: 34%;
+    height: 258px;
+    padding-top: 3.125rem;
+    background-color: var(--color-900);
+  }
+
+  .logo img {
+    margin: 0;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    width: 83%;
+    background-color: var(--color-900);
+  }
+
+  .title,
+  .description {
+    text-align: left;
+  }
+
+  .vendors {
+    order: 1;
+    justify-content: flex-start;
+    margin-left: 0;
+  }
+}
