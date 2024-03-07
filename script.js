@@ -58,7 +58,7 @@ formEl.addEventListener("submit", function (e) {
   let isEmailValid = checkEmail();
 
   if (isEmailValid) {
-    allert("Form submitted");
+    alert("Form submitted");
     formEl.reset();
   }
 });

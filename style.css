@@ -150,6 +150,7 @@ main {
 
   .background-img {
     position: relative;
+    z-index: -1;
   }
 
   .background-img::before {
@@ -157,6 +158,7 @@ main {
     background-blend-mode: multiply;
     background-color: var(--color-accent-400);
     background-size: cover;
+    filter: brightness(1.25);
     inset: 0 0 0 40%;
   }
 
@@ -256,8 +258,16 @@ main {
     inset: 8.125rem 0 0 40%;
   }
 
+  .logo {
+    padding: 0;
+    height: 131px;
+  }
+  .logo img {
+    margin-top: -1.75rem;
+  }
+
   .content {
-    width: 71%;
+    max-width: 723px;
   }
 
   .title {
@@ -267,6 +277,7 @@ main {
   }
 
   .description {
+    margin: 1.5rem 0 2.5rem;
     max-width: 445px;
   }
 
