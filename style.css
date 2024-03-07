@@ -47,6 +47,7 @@ body {
   font-family: var(--font-family);
   font-weight: var(--font-weight-regular);
   color: var(--color-200);
+  background-color: var(--color-900);
 }
 
 main {
@@ -63,6 +64,7 @@ main {
   background-color: var(--color-900);
   background-blend-mode: overlay;
   z-index: -1;
+  opacity: 0.5;
 }
 
 .accent {
@@ -141,7 +143,23 @@ main {
   gap: 1rem;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 640px) {
+  main {
+    padding-inline: 2.5rem;
+  }
+
+  .background-img {
+    position: relative;
+  }
+
+  .background-img::before {
+    background-image: url("./assets/tablet/image-host.jpg");
+    background-blend-mode: multiply;
+    background-color: var(--color-accent-400);
+    background-size: cover;
+    inset: 0 0 0 40%;
+  }
+
   .logo {
     width: 34%;
     height: 258px;
@@ -156,7 +174,7 @@ main {
   .content {
     display: flex;
     flex-direction: column;
-    width: 83%;
+    width: 90%;
     background-color: var(--color-900);
   }
 
@@ -165,9 +183,109 @@ main {
     text-align: left;
   }
 
+  .title {
+    margin-top: 5.8125rem;
+    font-size: 3rem;
+    line-height: 1.16667;
+  }
+
+  .description {
+    font-size: 1.125rem;
+    line-height: 1.55556;
+    max-width: 70%;
+  }
+
+  .signup-form__field {
+    max-width: 70%;
+    position: relative;
+  }
+
+  .signup-form__field button {
+    margin: 0;
+    position: absolute;
+    width: 162px;
+    height: 46px;
+    top: 5px;
+    right: 5px;
+  }
+
+  .signup-form__field input {
+    text-align: left;
+    height: 3.5rem;
+    padding-right: 162px;
+    padding-left: 2rem;
+  }
+
+  .signup-form__field small {
+    text-align: left;
+    padding-left: 2rem;
+  }
+
   .vendors {
     order: 1;
     justify-content: flex-start;
     margin-left: 0;
+    margin-bottom: 0;
+  }
+
+  .dots {
+    height: 257px;
+    width: 100%;
+    position: relative;
+  }
+
+  .dots::before {
+    content: "";
+    position: absolute;
+    background-image: url("./assets/desktop/bg-pattern-dots.svg");
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    inset: 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  main {
+    padding-inline: 11vw;
+    padding-top: 8.125rem;
+  }
+
+  .background-img::before {
+    background-image: url("./assets/desktop/image-host.jpg");
+    background-size: cover;
+    inset: 8.125rem 0 0 40%;
+  }
+
+  .content {
+    width: 71%;
+  }
+
+  .title {
+    margin-top: 5.5rem;
+    font-size: 3.25rem;
+    line-height: 1.19231;
+  }
+
+  .description {
+    max-width: 445px;
+  }
+
+  .signup-form__field {
+    max-width: 427px;
+  }
+
+  .vendors {
+    gap: 2rem;
+  }
+
+  .dots {
+    height: 130px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .dots::before {
+    top: -52px;
+    background-position: top right;
   }
 }
