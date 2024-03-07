@@ -158,7 +158,7 @@ main {
     background-blend-mode: multiply;
     background-color: var(--color-accent-400);
     background-size: cover;
-    filter: brightness(1.25);
+    filter: brightness(1.5);
     inset: 0 0 0 40%;
   }
 
