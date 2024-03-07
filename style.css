@@ -209,6 +209,7 @@ main {
     height: 46px;
     top: 5px;
     right: 5px;
+    box-shadow: none;
   }
 
   .signup-form__field input {
